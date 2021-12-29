@@ -59,3 +59,6 @@ Mp table 相关参考 MPsper.pdf 第四章
 BDA 相关参考https://wiki.osdev.org/BDA#BIOS_Data_Area_.28BDA.29
 ##lapicstartap
 启动AP 相关参考https://wiki.osdev.org/Symmetric_Multiprocessing
+##mmu.h
+PGROUNDUP 将地址向上转化为最近的PGSIZE倍数地址 eg: PGROUNDUP(620) ==> ((620 + (1024 -1)) & ~(1023)) ==> 1024  
+PGROUNDDOWN 将地址向下转化为最近的PGSIZE倍数地址 eg:PGROUNDDOWN(2400) ==> (2400 & ~(1023)) ==> 2048
