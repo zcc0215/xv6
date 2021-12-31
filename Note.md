@@ -62,3 +62,5 @@ BDA 相关参考https://wiki.osdev.org/BDA#BIOS_Data_Area_.28BDA.29
 ##mmu.h
 PGROUNDUP 将地址向上转化为最近的PGSIZE倍数地址 eg: PGROUNDUP(620) ==> ((620 + (1024 -1)) & ~(1023)) ==> 1024  
 PGROUNDDOWN 将地址向下转化为最近的PGSIZE倍数地址 eg:PGROUNDDOWN(2400) ==> (2400 & ~(1023)) ==> 2048
+##spinlock.c
+__sync_synchronize();内存屏障,指示编译器优化时屏障前后代码不越界
