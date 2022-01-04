@@ -69,6 +69,9 @@ kernelmemfs: $(MEMFSOBJS) entry.o entryother initcode kernel.ld fs.img
 	$(OBJDUMP) -S kernelmemfs > kernelmemfs.asm
 	$(OBJDUMP) -t kernelmemfs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > kernelmemfs.sym
 
+vectors.S: vectors.pl
+	./vectors.pl > vectors.S
+
 ULIB = ulib.o usys.o printf.o umalloc.o
 
 _%: %.o $(ULIB)
