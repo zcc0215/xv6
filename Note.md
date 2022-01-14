@@ -64,3 +64,8 @@ PGROUNDUP 将地址向上转化为最近的PGSIZE倍数地址 eg: PGROUNDUP(620)
 PGROUNDDOWN 将地址向下转化为最近的PGSIZE倍数地址 eg:PGROUNDDOWN(2400) ==> (2400 & ~(1023)) ==> 2048
 ##spinlock.c
 __sync_synchronize();内存屏障,指示编译器优化时屏障前后代码不越界
+##ioapic.c
+IRQ分配   
+Keyboard:1  
+COM port 1 or 3:4  
+Primary IDE controller:14
